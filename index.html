@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media_queries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Alimada Ismoilov</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects" onmouseover="showComingSoon()" onmouseout="hideComingSoon()">Projects</a></li>                
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#articles" onmouseover="showComingSoon()" onmouseout="hideComingSoon()">Articles</a></li>
+                <div id="comingSoonMessage" class="coming-soon">Coming Soon...</div>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Alimada Ismoilov</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onmouseover="showComingSoon()" onmouseout="hideComingSoon()">Projects</a></li>               
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="#articles" onmouseover="showComingSoon()" onmouseout="hideComingSoon()">Articles</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img 
+        src="./assets/profile-pic.png" 
+        alt="Ali profile picture" 
+        class="profile-pic"
+        />
+      </div>
+        <div class="section__text">
+            <p class="section__text_p1">Hello, I'm</p>
+            <h1 class="title">Alimadad Ismoilov</h1>
+            <p class="section__text_p2">Backend Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+                    Dowload CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contacts'">
+                    Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img 
+                src="./assets/linkedin.png" 
+                alt="My Linkedin profile" 
+                class="icon" 
+                onclick="location.href='https://www.linkedin.com/in/ali-ismoilov-8b6a31247/'"
+                >
+                <img 
+                src="./assets/github.png" 
+                alt="My Github profile" 
+                class="icon" 
+                onclick="location.href='https://github.com/AliIsmoilov'"
+                >
+            </div>
+        </div>
+    </section>
+</section>
+<section id="about">
+  <p class="section__text__p1">Get To Know More</p>
+  <h1 class="title">About Me</h1>
+  <div class="section-container">
+    <div class="section__pic-container">
+      <img
+        src="./assets/about-pic.png"
+        alt="Profile picture"
+        class="about-pic"
+      />
+    </div>
+    <div class="about-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <img
+            src="./assets/experience.png"
+            alt="Experience icon"
+            class="icon"
+          />
+          <h3>Experience</h3>
+          <p>2+ years <br />Backend Development</p>
+        </div>
+        <div class="details-container">
+          <img
+            src="./assets/education.png"
+            alt="Education icon"
+            class="icon"
+          />
+          <h3>Education</h3>
+          <p>Bachelors Degree in UNIME</p>
+        </div>
+      </div>
+      <div class="text-container">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+          reprehenderit et laborum, rem, dolore eum quod voluptate
+          exercitationem nobis, nihil esse debitis maxime facere minus sint
+          delectus velit in eos quo officiis explicabo deleniti dignissimos.
+          Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+          reiciendis ea magnam? Nulla, impedit fuga!
+        </p>
+      </div>
+    </div>
+  </div>
+  <img
+    src="./assets/arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#experience'"
+  />
+</section>
+<section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+            <h2 class="experience-sub-title">Golang Backend Developer</h2>
+          <div class="article-container">
+            <p class="company-info"><b>Lavina Tech LLC</b> - (Jun 2023 – present)</p>
+            <div class="experience-description">
+            <ul>
+                <li>
+                    Actively participated to the development of a comprehensive CRM system
+                    for a fast-food restaurant, involving 7 projects (admin panel, website,
+                    kitchen, courier, client app, cashier desktop, warehouse) utilizing a
+                    microservices-based monorepo architecture.
+                </li><br>
+                <li>
+                    increased test coverage in warehouse_service by 75% (from 10% to 85%)
+                </li><br>
+                <li>
+                    Decreased the response time of the products list in admin panel from 7s to
+                    under 500ms by removing for loops and using SQL JOINS and indexes.
+                </li><br>
+                <li>
+                    automated the expiration of discounts with cronjob, eliminating the need
+                    for manual admin intervention in the admin panel.
+                </li>
+            </ul>
+            </div>  
+          </div>
+        </div>
+    <div class="details-container">
+          <h2 class="experience-sub-title">Software Developer</h2>
+          <div class="article-container">
+            <p class="company-info"><b>Freelancer</b> (Feb 2023 – Jun 2023)</p>
+            <div class="experience-description">
+            <ul>
+                <li>
+                    I developed a backend for a startup "Ibron" which provides a platform for
+                    booking football stadiums and places for tabletennis.
+                </li><br>
+                <li>
+                    I participated in development of admin panel of education center"uacademy".
+                </li><br>
+            </ul>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#projects'"
+    />
+
+</section>
+<section id ="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+            <img 
+            src="./assets/linkedin.png" 
+            alt="Linkedin icon"
+            class="icon contact-icon"
+            >
+            <p><a href="https://www.linkedin.com/in/ali-ismoilov-8b6a31247/">Linkedin</a>
+            </p>
+        </div>
+        <div class="contact-info-container">
+            <img 
+            src="./assets/email.png" 
+            alt="Email icon"
+            class="icon contact-icon"
+            >
+            <p><a href="mailto:alimadadismoilov@gmail.com">alimadadismoilov@gmail.com</a>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>&#169; 2024 Alimadad Ismoilov</p>
+      </footer>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
